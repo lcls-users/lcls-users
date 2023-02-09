@@ -1,0 +1,12 @@
+site_name: LCLS Users Documentation
+repo_url: https://github.com/lcls-users/lcls-users
+site_author: FP, AP, GFD
+copyright: 2023 LCLS Bio
+nav: 
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - python
+        - bash
