@@ -30,3 +30,10 @@ Instruments/Hutches:
 	 
 	 XCS
 	 :    X-ray Correlation Spectroscopy instrument.
+
+## Materials
+Silver Behenate
+:    A silver salt of a long-chain fatty acid (behenic acid). Its powder diffraction pattern is often used for calibration of the detector distance from the interaction point.
+
+YAG
+:    Yttrium Aluminium Garnet
