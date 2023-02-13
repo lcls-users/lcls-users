@@ -1,8 +1,24 @@
 site_name: LCLS Users Documentation
 repo_url: https://github.com/lcls-users/lcls-users
 site_author: FP, AP, GFD
-copyright: 2023 LCLS Bio
-nav: 
+copyright: © 2023 LCLS
+markdown_extensions:
+    - admonition
+    - attr_list
+    - def_list
+nav:
+    - Home: 'index.md'
+    - Troubleshooting: 'troubleshooting.md'
+    - Glossary: 'glossary.md'
+    - Docs:
+        - Before your experiment:
+            - SLAC Unix Accounts: 'before/unixaccount.md'
+            - Geometry at LCLS: 'before/geometry.md'
+            - Timing ultrafast pulses: 'before/timetool.md'
+        - During your experiment:
+            - Running the timetool: 'during/timetool.md'
+        - After your experiment:
+            - Data binning: 'after/binning.md'
 theme:
     name: readthedocs
     highlightjs: true
@@ -10,3 +26,6 @@ theme:
         - yaml
         - python
         - bash
+    collapse_navigation: false
+    navigation_depth: 3
+    titles_only: true
