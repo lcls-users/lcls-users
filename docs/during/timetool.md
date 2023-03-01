@@ -19,11 +19,13 @@ Before the time tool can be employed it must be calibrated. During the process o
 
 (TBA Thursday 2023/03/02)
 
-![Timetool - DAQ control interface](images/DAQ_control_TT.png)
-*DAQ control interface to the Timetool. In the `DAQ Control` panel, (1) click `Edit`, (2) click `OPAL1K_1` or some equivalent device name, (3) click on `TimeToolConfig`. This will open the window on the left.*
+| ![Timetool - DAQ control interface](images/DAQ_control_TT.png) | 
+|:--:| 
+| *__DAQ control interface to the Timetool.__ In the `DAQ Control` panel, (1) click `Edit`, (2) click `OPAL1K_1` or some equivalent device name, (3) click on `TimeToolConfig`. This will open the window on the left.* |
 
-![Timetool - DAQ partition interface](images/DAQ_select_TT.png)
-*DAQ control interface to the partition. To select what is recorded in the DAQ partition, (1) click `Select`, (2) click `opal_tt` to record the timetool raw image data.*
+| ![Timetool - DAQ partition interface](images/DAQ_select_TT.png) | 
+|:--:| 
+| *__DAQ control interface to the partition.__ To select what is recorded in the DAQ partition, (1) click `Select`, (2) click `opal_tt` to record the timetool raw image data.* |
 
 [<p align="right">&#8673;Back to Top</p>](#)
 
