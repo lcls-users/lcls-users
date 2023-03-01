@@ -3,7 +3,7 @@ If you are performing a pump-probe measurement requiring sub-picosecond time res
 
 This page, similarly to others, is divided into two sections, [**Setup**](#setup) and [**Analysis**](#analysis). The **Setup** section of the page contains information on the procedure to perform optical pulse/X-ray pulse cross-correlation for establishing "time-zero" - when both pulses arrive at the sample simultaneously - as well as for collecting the dataset used for time tool calibration. The **Analysis** section details how to analyze the calibration dataset to establish a jitter correction model, as well as how to apply that model to create accurate time stamps for events corresponding to experimental data.
 
-## <a name="setup"></a> Setup
+##  Setup {: #setup}
 
 ### Cross-correlation
 Before running the time tool it needs to be established that "time zero" at the sample interaction point is the same as the time tool's. The beams on both the timing and pump arms are synchronized; however, the variable path that they travel needs to be accounted for. This is accomplished through the use of delay stages. A cross-correlation measurement usually in cerium-yttrium aluminium garnet (Ce-YAG), will be used to confirm that the optical pulses arrive with the same x-ray pulse at both the sample IP and the time tool. The beam-line scientists and your point of contact will be able to confirm what material is available for you. The following section outlines the necessary procedure for performing the cross-correlation.
@@ -25,8 +25,9 @@ Before the time tool can be employed it must be calibrated. During the process o
 ![Timetool - DAQ partition interface](./material/DAQ_select_TT.png)
 *DAQ control interface to the partition. To select what is recorded in the DAQ partition, (1) click `Select`, (2) click `opal_tt` to record the timetool raw image data.*
 
-<div align="right">&#8673; <a href="#" >Back to Top</a></div>
-## <a name="analysis"></a>Analysis
+[<p align="right">&#8673;Back to Top</p>](#)
+
+## Analysis {: #analysis}
 
 If you are running the time tool software it is assumed you have gone through the procedure above to ensure temporal coincidence of your optical pulses. The remainder of this section will be employing [btx](https://www.github.com/lcls-users/btx) for retrieving and interacting with time tool data.
 
