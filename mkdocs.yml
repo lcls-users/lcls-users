@@ -18,6 +18,7 @@ nav:
         - During your experiment:
             - Running the timetool: 'during/timetool.md'
         - After your experiment:
+            - Reanalyzing timing data: after/timetool.md
             - Data binning: 'after/binning.md'
 theme:
     name: readthedocs
