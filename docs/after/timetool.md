@@ -1,9 +1,12 @@
 # Reanalyzing Timing Data
 In most cases, the timestamps produced by the timetool during your experiment are accurate and reliable. These values should have been computed by the DAQ and written into the corresponding xtc files. Nonetheless, in certain instances you may want to revisit or reprocess the data, for example if:
-- The timetool needed to be realigned and the new calibration was not applied during the beam time.
-- You are very familiar with the timetool and would like to try to further improve on the temporal resolution through custom analysis.
+
+- The timetool needed to be realigned.
+- A new calibration was not applied during the beam time.
+- You are very familiar with the timetool and would like to try to further improve the temporal resolution through custom analysis.
 
 The timetool images were saved along with the rest of your experimental data, so it is possible to revisit them in your own time. A number of tools are provided by SLAC in order to facilitate this type of offline analysis. The following page will describe two such methods catered to different use cases:
+
 1. [**The TimeTool Module**](#TimeTool) - Using this tool you can reprocess your data using a new calibration. Basic familiarity with Python is required. The underlying analysis routines are written in C++ and not easily modified.
 2. [**btx**](#btx) - btx provides an all-Python entry point to timing analysis, for those interested in the underlying implementation. Standard analyses can be run easily from the command line by specifying btx tasks. More advanced users may like to clone the repository and edit in custom functionality.
 
@@ -16,11 +19,11 @@ A brief summary of `TimeTool` usage is provided below. For more information, ple
 
 **Procedure**:
 
-1. Determine the number corresponding to the timetool calibration run. Timetool calibration runs should be noted in the eLog. If not, either the beam line scientist or person(s) who worked the DAQ controls can tell you if you do not know.
-
 ### Jitter Correction
 
 **Procedure**:
+
+[<p align="right">&#8673;Back to Top</p>](#)
 
 ## Using btx {: #btx}
 The remainder of this page will explain how to use [btx](https://www.github.com/lcls-users/btx) to retrieve and interact with timetool data. The first two sections explain how to submit btx tasks from the command line to create a new time tool calibration model and apply it to your data. The final section provides a small introduction to extending the source code for custom analysis.
@@ -44,7 +47,7 @@ calibrate_timetool:
 ```
 
 !!! danger "Case-sensitivity"
-    Certain parameters, such as ```figs``` above may take case-sensitive values.
+    Certain parameters, such as ```figs``` above, may take case-sensitive values.
     
 <ol start=3>
 <li>Submit the task using the <code>elog_submit.sh</code> script.</li>
@@ -68,10 +71,10 @@ timetool/
 Diagnostic figures are stored in the ```figs``` subdirectory. The fitted calibration is stored in the ```calib``` subdirectory in a plain text file named ```r{run}.out``` where ```{run}``` is the number of the calibration run. The model is stored as polynomial coefficients in descending order. This file is what is used for performing timetool corrections to experimental data as explained below.
 
 ### Jitter Correction
-Once the timetool has been calibrated, a set of model parameters will be stored which can be used to correct the nominal time for any event in actual experimental data runs. An additional task has been defined in order to produce these corrections for you. Similarly to timetool calibration this task is defined in your btx YAML file. Note that you will likely need to run multiple calibration runs as the timing will drift over the course of your experiment. Make sure that you are using the most recent calibration for performing corrections. 
+Once the timetool has been calibrated, a set of model parameters will be stored which can be used to correct the nominal time for any event in actual experimental data runs. An additional task has been defined in order to produce these corrections for you. Similarly to timetool calibration this task is defined in your btx YAML file. Note that you may have run multiple calibration runs throughout your experiment as the alignment can drift over time. Make sure that you are using the most recent calibration for performing corrections. 
 
 !!! danger "Timing Drifts"
-    The instrument alignment will drift over time requiring recalibration. Make sure to always use the most recent calibration model for performing timetool corrections.
+    The instrument alignment will drift over time, requiring recalibration. Make sure to always use the most recent calibration model for performing timetool corrections.
 
 **Procedure**:
 
@@ -94,7 +97,7 @@ timetool_correct:
 ```
 
 !!! danger "Case-sensitivity"
-    Certain parameters, such as ```figs``` above may take case-sensitive values.
+    Certain parameters, such as ```figs``` above, may take case-sensitive values.
 
 <ol start=3>
 <li>Submit your task using <code>elog_submit.sh</code>.</li></ol>
@@ -112,3 +115,5 @@ timetool/
 └── figs/
      └── EdgesHist_r00{run}.png
 ```
+
+[<p align="right">&#8673;Back to Top</p>](#)

@@ -32,9 +32,6 @@ Before the time tool can be employed it must be calibrated. During the process o
 ## Analysis {: #analysis}
 
 During your experiment, the DAQ produced time stamps can generally be trusted. The main responsibility for those in charge of maintaining accurate timing is monitoring of the results. In particular, there are two things that should be verified frequently:
+
 1. That the timing does not drift so far that the timetool can no longer correct the jitter. This can generally be corrected for with a simple move of the delay stage, without further modification of the timetool alignment or processing.
 2. That the results of the timetool are reasonable. As mentioned, they should be, however, diagnositics, such as the detected edge position distributions, can help determine early on if there is a need to revisit the timetool calibration, or even address an alignment issue.
-
-### Correcting for Large Drift
-
-### Monitoring Diagnostics
