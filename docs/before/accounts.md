@@ -84,6 +84,8 @@ The experiments and their data can be found at the following path:
 ${SIT_PSDM_DATA}/<instrument>/<experiment>
 ``` 
 
+*TODO: a few sentences on batch, interactive and jupyter.*
+
 !!! note "More S3DF info"
     For more information about the S3DF, check out the PCDS documentation [here][4] and the official S3DF docs [here][5].
 
