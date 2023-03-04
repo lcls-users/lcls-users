@@ -7,19 +7,18 @@ markdown_extensions:
     - attr_list
     - def_list
 nav:
-    - Home: 'index.md'
-    - Troubleshooting: 'troubleshooting.md'
-    - Glossary: 'glossary.md'
-    - Docs:
-        - Before your experiment:
-            - SLAC Unix Accounts: 'before/unixaccount.md'
-            - Geometry at LCLS: 'before/geometry.md'
-            - Timing ultrafast pulses: 'before/timetool.md'
-        - During your experiment:
-            - Running the timetool: 'during/timetool.md'
-        - After your experiment:
-            - Reanalyzing timing data: after/timetool.md
-            - Data binning: 'after/binning.md'
+    - Before your experiment:
+        - Computing Accounts and Resources: 'before/accounts.md'
+        - Geometry at LCLS: 'before/geometry.md'
+        - Timing ultrafast pulses: 'before/timetool.md'
+    - During your experiment:
+        - Running the timetool: 'during/timetool.md'
+    - After your experiment:
+        - Reanalyzing timing data: after/timetool.md
+        - Data binning: 'after/binning.md'
+    - Miscellaneous:
+        - Troubleshooting: 'troubleshooting.md'
+        - Glossary: 'glossary.md'
 theme:
     name: readthedocs
     highlightjs: true
