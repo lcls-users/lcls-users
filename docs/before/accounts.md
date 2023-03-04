@@ -14,6 +14,8 @@ To access SLAC computing resources, you need a valid SLAC UNIX account. A detail
 !!! note "Enabling access to the S3DF"
     In order to use S3DF, it is necessary to enable your S3DF account using your SLAC UNIX account. Detailed information [in the S3DF documentation here][7].
 
+!!! danger "Access to NERSC"
+    At the moment, users need a NERSC account to run LCLS workflows there. See [this link][9] for some information on how to create an account at NERSC. Work is in progress to remove this unncessary constraint.
 
 # Step 2 - Access and process data
 Now that you can access the computer systems at SLAC, it is time to get yourself oriented. 
@@ -28,7 +30,11 @@ for intensive compute during and after the beamtime. *(All)*
 
 *TODO: figure to describe the network and data infrastructure.*
 
-The following briefly describe how to access the FFB and various offline resources. Jump to: [FFB](#ffb) - [S3DF](#s3df) - [NERSC](#nersc).
+!!! danger "FFB migration to S3DF"
+    S3DF is a new capability at SLAC and is currently still a work in progress. 
+    The FFB nodes will soon be a part of it - when that happens, it will be more seamless to switch from online analysis to offline analysis at the end of the beamtime. 
+    But for now (March 2023), the approach described in the first section below is still valid for past experiments.
+    In time, experiments will be analyzed on S3DF both during and after beamtimes (see following section).
 
 ### &#x2192; on the FFB - Fast Feedback System {: #ffb}
 
@@ -55,13 +61,32 @@ The experiments and their data can be found at the following path:
 
 
 ### &#x2192; at S3DF - SLAC Shared Science Data Facility {: #s3df}
+
 First, get in the system:
 ```
 ssh <username>@s3dflogin.slac.stanford.edu
 ```
+In order to get access to the data and to submit SLURM jobs, reach an interactive node:
+```
+ssh psana
+```
+Once on the interactive node, execute the following command (or place it in your `~/.bashrc`) in order to set the necessary environment variables and environments that will allow you to find the data and process it:
+``` 
+source /sdf/group/lcls/ds/ana/sw/conda1/manage/bin/psconda.sh
+```
+!!! note "FFB at S3DF"
+    In S3DF, both FFB and Offline storage are accessible. By default, the command above points to the offline storage. In order to access the FFB storage, you can override the environment variable that points to the data:
+    ```
+    export SIT_PSDM_DATA=/sdf/data/lcls/drpsrcf/ffb
+    ```
+The experiments and their data can be found at the following path:
+```
+${SIT_PSDM_DATA}/<instrument>/<experiment>
+``` 
 
+!!! note "More S3DF info"
+    For more information about the S3DF, check out the PCDS documentation [here][4] and the official S3DF docs [here][5].
 
-### &#x2192; at NERSC - National Energy Research Scientific Computing Center {: #nersc}
 
 [1]: https://confluence.slac.stanford.edu/pages/viewpage.action?pageId=92183280
 [2]: https://confluence.slac.stanford.edu/display/PSDM/LCLS+Data+Analysis
@@ -71,3 +96,4 @@ ssh <username>@s3dflogin.slac.stanford.edu
 [6]: https://confluence.slac.stanford.edu/display/PCDS/Accounts
 [7]: https://s3df.slac.stanford.edu/public/doc/#/accounts-and-access
 [8]: https://confluence.slac.stanford.edu/display/PCDS/Fast+Feedback+System
+[9]: https://docs.nersc.gov/accounts/
