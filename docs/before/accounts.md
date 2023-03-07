@@ -3,65 +3,60 @@
     - **Account** - [Create a UNIX account][6]
     - **Computing** - [Access and Resources][1]
     - **Data Analysis** - for [LCLS-I][2] and for [LCLS-II][3]
-    - **FFB docs** - [PCDS docs][8]
-    - **S3DF docs** - ["Running at S3DF" for LCLS][4] and [official S3DF documentation][5].
+    - **FFB docs** - [PCDS maintained documentation page][8]
+    - **S3DF docs** - [PCDS maintained documentation page][4] + [official S3DF documentation][5].
 
 
 # Step 1 - Get a computer account
 
-To access SLAC computing resources, you need a valid SLAC UNIX account. A detailed description of the steps required to create one can be found [here][6].
+To access and process your LCLS experiment data, you first need a valid SLAC UNIX account, enabled in the LCLS System.
+To this end, you will need to follow the steps below (*and for more detailed information, check out this [Confluence documentation page][6]*).
+
+1. Apply for a UNIX account through the [User Portal](https://userportal.slac.stanford.edu/).
+2. Take the course [CS101 - cyber security basics](http://training.slac.stanford.edu/web-training.asp).
+3. Understand the [Acceptable Use of SLAC Information Technology Resources](https://policies.slac.stanford.edu/policy/acceptable-use-information-technology-resources).
+4. The experiment spokesperson adds your UNIX account to the [Experiment Manager](https://pswww.slac.stanford.edu/lgbk/lgbk/experiments).
 
 !!! note "Enabling access to the S3DF"
-    In order to use S3DF, it is necessary to enable your S3DF account using your SLAC UNIX account. Detailed information [in the S3DF documentation here][7].
+    The SLAC-wide Shared Science Data Facility ([S3DF](https://lcls-users.readthedocs.io/en/latest/glossary/#s3df)) will soon replace the computer and storage resources managed by LCLS Photon Controls and Data Systems ([PCDS](https://lcls-users.readthedocs.io/en/latest/glossary/#pcds)) currently used for LCLS experiment data management.
+    In order to use S3DF, it is necessary to enable your S3DF account using your SLAC UNIX account. Detailed information in the [S3DF documentation here][7].
 
-!!! danger "Access to NERSC"
-    At the moment, users need a NERSC account to run LCLS workflows there. See [this link][9] for some information on how to create an account at NERSC. Work is in progress to remove this unncessary constraint.
-
-# Step 2 - Access and process data
+# Step 2 - Understand LCLS Data Systems
 Now that you can access the computer systems at SLAC, it is time to get yourself oriented. 
-It is useful for that to understand how the data flows from the beamline to storage, *a.k.a* to understand the LCLS Data Systems, built with 3 successive levels:
+For that, it is useful to understand how the data flows from the beamline to storage, *a.k.a* to understand the LCLS Data Systems, built with 3 successive levels:
 
-- **1 &#x3e;  DAQ+DRP - Data acquisition and reduction**:<br>
-provides diagnostics within <1s. *(Experts only)*
-- **2 &#x3e;  FFB - Fast Feedback**:<br> 
-provides diagnostics and results within <1min. *(All)*
-- **3 &#x3e;  Offline Analysis**:<br> 
-for intensive compute during and after the beamtime. *(All)*
+| Level # | Processing Time | Storage Duration | Access |
+| -- | -- | -- | -- |
+| 1. Data Acquisition<br> and Reduction | diagnostics within <1s. | None.<br>Data is in shared memory.| **Experts only** |
+| 2. Fast Feedback | diagnostics and results<br> within <1min.| <1 week. | *(before) -* through `pslogin` to `psffb`.<br> *(now) -* on S3DF. |
+| 3. Offline Analysis | intensive compute during<br> and after the beamtime.| <4 months<br> before being moved to tape.| *(before) -* through `pslogin` to `psana`.<br> *(now) -* on S3DF |
 
-*TODO: figure to describe the network and data infrastructure.*
+The figure below provides a high-level map of the LCLS Data Systems presenting the main entities and their networks. (more TBD).
 
-!!! danger "FFB migration to S3DF"
+| ![Data Systems](images/Data_Systems.png) | 
+|:--:| 
+| *__LCLS Data Systems.__ TBD.* |
+
+
+!!! danger "migration to S3DF"
     S3DF is a new capability at SLAC and is currently still a work in progress. 
-    The FFB nodes will soon be a part of it - when that happens, it will be more seamless to switch from online analysis to offline analysis at the end of the beamtime. 
-    But for now (March 2023), the approach described in the first section below is still valid for past experiments.
-    In time, experiments will be analyzed on S3DF both during and after beamtimes (see following section).
+    New experiments will be stored and processed on S3DF while previous experiments can still be access on the PCDS clusters.
+    On S3DF, it will be more seamless to switch from online analysis to offline analysis between shifts and at the end of the beamtime.
 
-### &#x2192; on the FFB - Fast Feedback System {: #ffb}
+# Step 3 - Access your experiment data
 
-First, get in the system:
-```
-ssh <username>@pslogin.slac.stanford.edu
-```
-From there, you can access the FFB nodes:
-```
-ssh psffb
-```
-The experiments and their data can be found at the following path:
-```
-/cds/data/drpsrcf/<instrument>/<experiment>
-```
-!!! danger "Data import/export"
-    Note that the FFB nodes are not exposed to external networks. If you need to transfer data, you can go through `psexport.slac.stanford.edu`.
+Your experiment data can not be reached directly from external networks. You must first access a login node. 
 
-*TODO: a few sentences on batch, interactive and jupyter.*
+| ![Data Access](images/Data_Access.png) | 
+|:--:| 
+| *__Pathways to the Experiment.__ TBD.* |
 
+The exact pathway will depend on whether your experiment happened before 2023 or not and whether you intend to do online analyis on the FFB nodes or offline analysis. 
+We detail these different scenarii below.
 
-!!! note "More FFB info"
-    For more information about the Fast Feedback System, check out the PCDS documentation [here][8].
+### Recent experiments (2023 - ...)
 
-
-### &#x2192; at S3DF - SLAC Shared Science Data Facility {: #s3df}
-
+It is anticipated that experiments carried in 2023 or after will be processed directly on S3DF. 
 First, get in the system:
 ```
 ssh <username>@s3dflogin.slac.stanford.edu
@@ -82,12 +77,41 @@ source /sdf/group/lcls/ds/ana/sw/conda1/manage/bin/psconda.sh
 The experiments and their data can be found at the following path:
 ```
 ${SIT_PSDM_DATA}/<instrument>/<experiment>
-``` 
-
-*TODO: a few sentences on batch, interactive and jupyter.*
+```
 
 !!! note "More S3DF info"
     For more information about the S3DF, check out the PCDS documentation [here][4] and the official S3DF docs [here][5].
+
+
+### Past experiments (pre 2023)
+
+First, get in the system:
+```
+ssh <username>@pslogin.slac.stanford.edu
+```
+From there, you can access the FFB nodes or offline analysis nodes:
+```
+ssh psana # offline nodes
+# or 
+ssh psffb # FFB nodes
+```
+In order to set the necessary environment to start processing it, execute the following command:
+```
+source /reg/g/psdm/etc/psconda.sh 
+```
+The experiments and their data can be found at the following path:
+```
+/cds/data/psdm/<instrument>/<experiment>     # Offline storage
+/cds/data/drpsrcf/<instrument>/<experiment>  # FFB storage
+```
+
+!!! danger "Data import/export"
+    Note that interactive nodes are not exposed to external networks. If you need to transfer data, you can go through `psexport.slac.stanford.edu`.
+
+!!! note "More FFB info"
+    For more information about the Fast Feedback System, check out the PCDS documentation [here][8].
+
+
 
 
 [1]: https://confluence.slac.stanford.edu/pages/viewpage.action?pageId=92183280
