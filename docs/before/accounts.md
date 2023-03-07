@@ -45,7 +45,7 @@ The figure below provides a high-level map of the LCLS Data Systems presenting t
 
 # Step 3 - Access your experiment data
 
-Your experiment data can not be reached directly from external networks. You must first access a login node. 
+Your experiment data cannot be reached directly from external networks. You must first access a login node. 
 
 | ![Data Access](images/Data_Access.png) | 
 |:--:| 
@@ -56,7 +56,7 @@ We detail these different scenarii below.
 
 ### Recent experiments (2023 - ...)
 
-It is anticipated that experiments carried in 2023 or after will be processed directly on S3DF. 
+It is anticipated that experiments carried out in 2023 or after will be processed directly on S3DF. 
 First, get in the system:
 ```
 ssh <username>@s3dflogin.slac.stanford.edu
