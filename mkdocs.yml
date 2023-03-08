@@ -9,6 +9,7 @@ markdown_extensions:
 nav:
     - Before your experiment:
         - Computing Accounts and Resources: 'before/accounts.md'
+        - Introduction to btx: 'before/btx.md'
         - Geometry at LCLS: 'before/geometry.md'
         - Timing ultrafast pulses: 'before/timetool.md'
     - During your experiment:

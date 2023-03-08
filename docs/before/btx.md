@@ -7,7 +7,9 @@
 
 *btx* is a resource for analyzing experiments performed at LCLS, both during and after beamtime. To facilitate rapid analysis, common data processing steps have been organized into tasks that can be easily accessed from the eLog or command-line without users having to write new code. This is a primarily Python-based package to which contributions are welcome, as *btx* is intended as a library to serve the user community at LCLS. Currently most tasks are geared toward SFX data analysis, but we intend to expand the scope to encompass other experiments, such as SPI and SAXS/WAXS.
 
-## Usage 
+## Usage
+
+### Preparing the configuration file
 
 To run *btx*, we first need to generate a configuration file that lists the desired tasks and defines their corresponding parameters. This file follows yaml format; a partial example file is shown below:
 ```
@@ -32,7 +34,7 @@ The entries under `setup` define experiment parameters, while the remainder of t
 ```
 ${SIT_PSDM_DATA}/<instrument>/<experiment>/scratch/<my_directory>/yaml
 ```
-where ${SIT_PSDM_DATA} is one of the following:
+where `${SIT_PSDM_DATA}` is one of the following:
 ```
 /sdf/data/lcls/drpsrcf/ffb # S3DF cluster
 /cds/data/drpsrcf # PCDS FFB cluster
@@ -44,7 +46,7 @@ The listed tasks can then be run either from the elog (which makes it possible t
 
 ### From the command-line
 
-To make the executable accessible, add the following line to your `~/.bashrc` for analysis on the ffb or ana clusters:
+To make the executable accessible, add the following line to your `~/.bashrc` for analysis on the PCDS clusters:
 ```
 export PATH=/cds/sw/package/autosfx/btx/scripts:$PATH
 ```
