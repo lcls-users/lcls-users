@@ -14,7 +14,6 @@ nav:
         - Running the timetool: 'during/timetool.md'
     - After your experiment:
         - Reanalyzing timing data: 'after/timetool.md'
-        - Data binning: 'after/binning.md'
     - Miscellaneous:
         - Troubleshooting: 'troubleshooting.md'
         - Glossary: 'glossary.md'
