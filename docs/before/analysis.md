@@ -90,17 +90,18 @@ If launching from within the `launchpad` directory, as above, a specific task ca
 elog_submit.sh -c ../yaml/default_config.yaml -t <task> -n <ncores>
 ```
 If running this from the psana cluster, the following arguments should be added to the above command: `-f SLAC -q psanaq`. Command-line arguments for the `elog_submit.sh` script follow:
-```
+
 | Flag  | Meaning                                             | Usage                |
-| -f    | Facility: SRCF_FFB (FFB), SLAC (psana), or S3DF     | -f <facility>        |
-| -q    | Queue to use.                                       | -q <queue>           |
-| -n    | Number of cores (soon to be deprecated)             | -n <ncores>          |
-| -a    | SLURM account, only relevant for S3DF               | -a <account>         |
-| -t    | Task to run. Must match the name in the YAML file.  | -t <task>            |
-| -c    | Path to the configuration file in YAML format.      | -c <config_file>     |
-| -e    | Name of the experiment.                             | -e <experiment_name> |
-| -r    | Run to process. If supplied override YAML value.    | -r <run_number>      |
-```
+|--|--|--|
+| -f    | Facility: SRCF_FFB (FFB), SLAC (psana), or S3DF     | -f <facility\>        |
+| -q    | Queue to use.                                       | -q <queue\>           |
+| -n    | Number of cores (soon to be deprecated)             | -n <ncores\>          |
+| -a    | SLURM account, only relevant for S3DF               | -a <account\>         |
+| -t    | Task to run. Must match the name in the YAML file.  | -t <task\>            |
+| -c    | Path to the configuration file in YAML format.      | -c <config_file\>     |
+| -e    | Name of the experiment.                             | -e <experiment_name\> |
+| -r    | Run to process. If supplied override YAML value.    | -r <run_number\>      |
+
 A related executable, `submit_range_run.sh`, will launch the same task across a series of runs. This script can be run in the same fashion as `elog_submit.sh` and with the same flags, except an additional `-s` flag should be added that determines the last run number to process. 
 
 More details about available tasks can be found in the relevant experiment pages.
@@ -125,13 +126,14 @@ Enter the following information:
 - *Executable*: the path to the `btx` eLog trigger script: `/cds/sw/package/autosfx/btx/scripts/elog_trigger.py`.
 - *Parameters*: the command-line arguments for the `elog_trigger.py` script. See just below for their descriptions:
 
-```
+
 | Flag  | Meaning                                             | Usage                |
-| -d    | Name of the DAG you wish to use.                    | -d <dag>             |
-| -q    | Queue to use.                                       | -q <queue>           |
-| -n    | Number of cores (soon deprecated)                   | -n <n_cores>         |
-| -c    | Path to the configuration file in YAML format.      | -c <config_file>     |
-```
+|--|--|--|
+| -d    | Name of the DAG you wish to use.                    | -d <dag\>             |
+| -q    | Queue to use.                                       | -q <queue\>           |
+| -n    | Number of cores (soon deprecated)                   | -n <n_cores\>         |
+| -c    | Path to the configuration file in YAML format.      | -c <config_file\>     |
+
 
 ##### Trigger the workflow from the eLog
 Navigate to the "Workflow control" tab [https://pswww.slac.stanford.edu/lgbk/lgbk/{experiment}/#lcls_wf_jobs]() (see step 3 in the figure above). To trigger a worflow for a given run, select the workflow "Name" from the list in the "Job" column. 
