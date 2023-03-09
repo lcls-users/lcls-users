@@ -14,6 +14,8 @@ nav:
         - Running the timetool: 'during/timetool.md'
     - After your experiment:
         - Reanalyzing timing data: 'after/timetool.md'
+    - Tutorials:
+          - How to computers: 'tutorials/computers101.md'
     - Miscellaneous:
         - Troubleshooting: 'troubleshooting.md'
         - Glossary: 'glossary.md'
