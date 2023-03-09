@@ -34,7 +34,7 @@ Data should have been collected in a special calibration run. Using this data, t
 **Procedure**:
 
 1. Determine the number corresponding to the timetool calibration run. Timetool calibration runs should be noted in the eLog. If not, either the beam line scientist or person(s) who worked the DAQ controls can tell you if you do not know.
-2. Edit the btx YAML file to include parameters for a new task ```calibrate_timetool```. Refer to the [btx introduction](/before/btxintro) if you are unclear on which file this is. This task takes three parameters:
+2. Edit the btx YAML file to include parameters for a new task ```calibrate_timetool```. Refer to the [btx introduction](/before/analysis) if you are unclear on which file this is. This task takes three parameters:
     - ```run``` : The number of the calibration run.
     - ```order``` : An integer specifying the order of the polynomial to fit to the data. Second-order (i.e. quadratic) polynomials are typically used at LCLS.
     - ```figs``` : True/False - Diagnostic figures will be generated. This option is case-sensitive - **capitalize** the first letter.
