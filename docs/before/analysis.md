@@ -115,7 +115,7 @@ In your browser, you can access your {experiment} logbook (eLog) at the followin
 |:--:| 
 | *__Example of SFX workflow implemented with `btx`.__ 1) Define the Airflow workflow within `btx`, eventually making use of `tppwrw` to deploy containers. 2) Setup the workflows in the eLog. 3) Trigger the workflows manually or automatically from the eLog. 4) Check the results interactively in the eLog Summary panel.* |
 
-##### Setup the workflow definition in the Elog
+##### Setup the workflow definition in the eLog
 Navigate to the "Workflow definition" tab [https://pswww.slac.stanford.edu/lgbk/lgbk/{experiment}/#lcls_wf_defs]() (see step 2 in the figure above) and click on the "+" button located at the top right of the window. 
 Enter the following information:
 
