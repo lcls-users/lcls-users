@@ -1,5 +1,6 @@
 site_name: LCLS Users Documentation
 repo_url: https://github.com/lcls-users/lcls-users
+edit_uri: blob/main/docs/
 site_author: FP, AP, GFD
 copyright: © 2023 LCLS
 markdown_extensions:
