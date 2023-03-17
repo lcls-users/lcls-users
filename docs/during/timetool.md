@@ -1,3 +1,8 @@
+!!! note "Quick links - Additional Resources"
+    - **Data Analysis Team Documentation** - [Timetool Processing Information][1] - Includes description of the theory and application of the timetool.
+    - **SmallData Tools Documentation** - [smalldata_tools][2] - Code examples for performing analysis with smalldata_tools including timetool data.
+    - **XPP Hutch Documentation** - [XPP Timetool Information][3] (Requires SLAC Windows Account)
+
 # Running the Timetool
 If you are performing a pump-probe measurement requiring sub-picosecond time resolution, you will need to correct for the jitter in the X-ray arrival time. LCLS deploys a time tool to facilitate this. The theory of the tool is detailed [here](/before/timetool). Below you will find a step-by-step guide for setting up the tool, and ensuring it is calibrated and running well to ensure reliable jitter correction for your experiment.
 
@@ -35,3 +40,7 @@ During your experiment, the DAQ produced time stamps can generally be trusted. T
 
 1. That the timing does not drift so far that the timetool can no longer correct the jitter. This can generally be corrected for with a simple move of the delay stage, without further modification of the timetool alignment or processing.
 2. That the results of the timetool are reasonable. As mentioned, they should be, however, diagnositics, such as the detected edge position distributions, can help determine early on if there is a need to revisit the timetool calibration, or even address an alignment issue.
+
+[1]: https://confluence.slac.stanford.edu/display/PSDM/TimeTool
+[2]: https://confluence.slac.stanford.edu/display/PSDM/smalldata_tools%3A+Analysis+tools+for+aligned+data
+[3]: https://confluence.slac.stanford.edu/pages/viewpage.action?spaceKey=XPP&title=2.6+Time+Tool

@@ -1,3 +1,8 @@
+!!! note "Quick links - Additional Resources"
+    - **Data Analysis Team Documentation** - [Timetool Processing Information][1] - Includes description of the theory and application of the timetool.
+    - **SmallData Tools Documentation** - [smalldata_tools][2] - Code examples for performing analysis with smalldata_tools including timetool data.
+    - **XPP Hutch Documentation** - [XPP Timetool Information][3] (Requires SLAC Windows Account)
+
 # Reanalyzing Timing Data
 In most cases, the timestamps produced by the timetool during your experiment are accurate and reliable. These values should have been computed by the DAQ and written into the corresponding xtc files. Nonetheless, in certain instances you may want to revisit or reprocess the data, for example if:
 
@@ -117,3 +122,7 @@ timetool/
 ```
 
 [<p align="right">&#8673;Back to Top</p>](#)
+
+[1]: https://confluence.slac.stanford.edu/display/PSDM/TimeTool
+[2]: https://confluence.slac.stanford.edu/display/PSDM/smalldata_tools%3A+Analysis+tools+for+aligned+data
+[3]: https://confluence.slac.stanford.edu/pages/viewpage.action?spaceKey=XPP&title=2.6+Time+Tool
