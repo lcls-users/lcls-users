@@ -1,0 +1,28 @@
+name: Website Bug Report
+description: Report errors in the website build
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - gadorlhiac
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please use this form to report technical errors in the website - broken links, images not displaying, etc. Thanks for taking the time to fill this out.
+  - type: input
+    id: page
+    attributes:
+      label: Page with Error
+      description: Please provide a link to the page where you observed a bug.
+      placeholder: https://lcls-users.readthedocs.io/en/latest
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Please describe the issue.
+      placeholder: Please describe the issue.
+      value: "The images are not loading."
+    validations:
+      required: true

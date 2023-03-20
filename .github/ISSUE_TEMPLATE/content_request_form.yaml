@@ -1,0 +1,29 @@
+name: Content Request
+description: Submit requests for documentation pages on new topics.
+title: "[Request]: "
+labels: ["request"]
+assignees:
+  - lcls-users/lcls
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If there is a topic you would like to see addressed in the documentation, please submit this form.
+  - type: textarea
+    id: description
+    attributes:
+      label: Topic Description
+      description: Please provide a short description of the topic/process you would like to see added to the documentation
+      placeholder: Please add some additional information on the following topics
+      value: "Topics:"
+    validations:
+      required: true
+  - type: textarea
+    id: experts
+    attributes:
+      label: Review from Specific People?
+      description: If you think it would help to have specific people address the topic being requested, please indicate so below.
+      placeholder: I believe Person A. should help with this contribution.
+      value: "Person A should review this documentation."
+    validations:
+      required: true
