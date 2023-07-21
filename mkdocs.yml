@@ -15,6 +15,7 @@ nav:
     - After your experiment:
         - Reanalyzing timing data: 'after/timetool.md'
     - Miscellaneous:
+        - Computers101: 'tutorials/computers101.md'
         - Troubleshooting: 'troubleshooting.md'
         - Glossary: 'glossary.md'
 theme:
