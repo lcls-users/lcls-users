@@ -3,7 +3,16 @@
     This page will provide guidance and key points for navigating and operating with the Unix Terminal, Git, Python, and SSH. 
     Concepts, useful command charts, and demonstration of function are below. See <a href="Software-Carpentry.org">Software Carpentry</a>
     for in depth instruction. 
-## How to Terminal
+
+<a name="toc"></a> **Jump to:**
+- [How to Terminal](#terminal)
+- [How to `git` and GitHub](#git)
+- [How to `python`](#python)
+- [How to SSH](#ssh)
+
+---
+
+## <a name="terminal"></a> How to Terminal
 !!! note "Summary" 
     See <a href="Software-Carpentry.org">Software Carpentry</a> for instruction. Below are key take aways and what to look for in the link. 
     We will be using the Unix Shell to:
@@ -90,9 +99,13 @@
 **Script** - a list of a particular sequence of commands, usually stored in a file or saved for future reference
 <br><br>**Leaving Comments**
 <br>&ensp;&ensp;-the # symbol followed by a string can be used to leave a comment in a script that will be skipped over by the shell, so that it won't run as a command
-<br>&ensp;&ensp;-this can be useful for leaving notes on what your command does for others or for future reference 
+<br>&ensp;&ensp;-this can be useful for leaving notes on what your command does for others or for future reference
 
-## How to `git and github`- Using a Version Control System
+[*(back to top)*](#toc)
+
+---
+
+## <a name="git"></a> How to `git and github`- Using a Version Control System
 
 !!! note "Summary"
     See <a href="https://swcarpentry.github.io/git-novice/">Software Carpentry</a> for instruction. Below are key take aways and what to look for in the link.
@@ -165,7 +178,11 @@ will..." to accurately describe your changes.
 and not allow your code to merge.  
 <br><br>See this [link to Github tutorial for beginners](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners) for additional information. 
 
-##How to `python`
+[*(back to top)*](#toc)
+
+---
+
+## <a name="python"></a> How to `python`
 
 !!! note "Summary"
     See <a href="Software-Carpentry.org">Software Carpentry</a> for instruction. Below are key take aways and what to look for in the link.
@@ -211,7 +228,11 @@ used to interact with your data. This will depend on the program you are using.
 <br>A function is a set of commands that will only be executed when called upon, following this format:
 <br>You define the name of the function and parameters, and use `return` to state what you want done. 
 
-## How to SSH
+[*(back to top)*](#toc)
+
+---
+
+## <a name="ssh"></a> How to SSH
 !!! Summary
     SSH or secure shell is a way to securely connect your computer to a remote server. This is done by using the shell. SSH needs to be installed on both your computer 
     and the server you are connecting to. This is commonly referred to as a client and server connection. 
@@ -223,3 +244,5 @@ used to interact with your data. This will depend on the program you are using.
 <br>Enter your password.
 <br>If it is your first time connecting, it will ask if you wish to continue connecting. Type 'yes' and press the enter key. 
 <br>Now, you should be connected. 
+
+[*(back to top)*](#toc)
