@@ -17,38 +17,41 @@
     See <a href="Software-Carpentry.org">Software Carpentry</a> for instruction. Below are key take aways and what to look for in the link. 
     We will be using the Unix Shell to:
     <blockquote> 
-    -navigate files and directories
-    <br>-work with files, directories, loops, and scripts
-    <br>-utilize pipes and filters 
-    <br>-find strings, files, and directories that match a pattern
-    <br>-learn how to combine commands to carry out and achieve tasks 
-    <br>-learn shortcuts for ease of working with a programming language
+
+    - navigate files and directories
+    - work with files, directories, loops, and scripts
+    - utilize pipes and filters 
+    - find strings, files, and directories that match a pattern
+    - learn how to combine commands to carry out and achieve tasks 
+    - learn shortcuts for ease of working with a programming language
     </blockquote>
  
-<br>**The Essentials**
-<br><br>**The Shell** 
-<br>The **shell,** also known as the terminal or command line, is a program that enables users to direct commands to the computer to do . 
+### The Essentials
+#### The Shell
+ The **shell,** also known as the terminal or command line, is a program that enables users to direct commands to the computer to do . 
     The computer reads those commands and then runs programs to achieve your specified task. 
     The most common way people do this is through a graphical user interface (GUI), where one can click icons and use menus to interact. 
     Here however, you will use a command line interface (CLI), where one can type commands in a scripting language. 
-<br><br>**Shell Prompt**
-<br>The shell's prompt `$` is where a command/executable is entered. 
+#### Shell Prompt
+The shell's prompt `$` is where a command/executable is entered. 
     This may look different depending on your device and operating system, but the shell waits for your input here:
     <br> `$ [your command here]`
 <br><br> This is a **command/executable**: `ls` 
-<br><br>**Basic Structure of a Command**
-<br>At the prompt:
+#### Basic Structure of a Command
+At the prompt:
 <br>$`CommandName [option(s)] [argument(s)]`
-<br>&ensp;&ensp;-an **option** changes the behavior of a command
-<br>&ensp;&ensp;-an **argument** states what the command should operate on
-<br>&ensp;&ensp;-**parameters** are options and arguments
-<br>&ensp;&ensp;-commands can have none or more than one option and argument
-<br><br>**Files and Directories**
-<br>A **file** is an entity that stores information. 
+
+- an **option** changes the behavior of a command
+- an **argument** states what the command should operate on
+- **parameters** are options and arguments
+- commands can have none or more than one option and argument
+
+#### Files and Directories
+A **file** is an entity that stores information. 
     A **directory** is a folder, holding other files and directories within itself. 
     There is a root directory from which all files, directories, and **programs** are stored on your computer.  
-<br>**Key Commands**
-<br>*Note: each command can have several options with combinations of arguments, not listed here. Explore them to fully access the shell's capabilities.*
+#### Key Commands
+*Note: each command can have several options with combinations of arguments, not listed here. Explore them to fully access the shell's capabilities.*
 
 |<div style="width:140px">Command</div> | Description    |
 |----------------|----------------|
@@ -80,7 +83,7 @@
 |`grep [pattern] [path]`|**Grep**<br>- searches for a continuous string in one or more files that match a pattern<br>- case insensitive unless specified |
 |`find [path]`   |**Find**<br>- finds and prints every file and directory under the specified path and parameters given in the command | 
 
-**Keyboard Shortcuts**
+#### Keyboard Shortcuts
 
 |<div style="width:150px">Shortcut</div> |<div style="width:300px">Description</div> | 
 |---------------------------------------|------------------------------------------|
@@ -91,21 +94,20 @@
 |~|-the tilde represents the user's home directory<br>-can be used to navigate directories without typing out the user's home directory|
 |* or ?|**Wildcards**<br>-a character that can be used to represent a set of none or more characters<br>-can be used for ease of navigating files and directories in the shell|
 
-## Other Notes
-###Directories
-**Directory names** are written as: `DirectoryName/` with the slash mark to indicate it is a directory
-<br><br>**Recursive** - a directory can contain multiple files and/or multiple directories that each have multiple files and/or directories. If a command or program is "recursive," it will act on a directory and all of the contents of that directory
-###Scripts
-**Script** - a list of a particular sequence of commands, usually stored in a file or saved for future reference
-<br><br>**Leaving Comments**
-<br>&ensp;&ensp;-the # symbol followed by a string can be used to leave a comment in a script that will be skipped over by the shell, so that it won't run as a command
-<br>&ensp;&ensp;-this can be useful for leaving notes on what your command does for others or for future reference
+#### Recursive
+A directory can contain multiple files and/or multiple directories that each have multiple files and/or directories. If a command or program is "recursive," it will act on a directory and all of the contents of that directory
+#### Scripts
+A **script** is a list of a particular sequence of commands, usually stored in a file or saved for future reference
+#### Leaving Comments
+`# This is a comment`
+<br> The # symbol followed by a string can be used to leave a comment in a script that will be skipped over by the shell, so that it won't run as a command.
+This can be useful for leaving notes on what your command does for others or for future reference
 
 [*(back to top)*](#toc)
 
 ---
 
-## <a name="git"></a> How to `git and github`- Using a Version Control System
+## <a name="git"></a> How to `git and github` - Using a Version Control System
 
 !!! note "Summary"
     See <a href="https://swcarpentry.github.io/git-novice/">Software Carpentry</a> for instruction. Below are key take aways and what to look for in the link.
@@ -113,43 +115,43 @@
     basic git commands, initiating repositories, and utilizing `git add` and `git commit` are the crucial to successfully utilize `git` and `github`. 
     <br>*Note: A basic understanding of using Terminal is not mandatory but is useful for navigating and working with the version control Git. 
     See the "How to Terminal" section for reference. A basic understanding of navigating a Unix-like terminal will be assumed for working with this version control system.*
-     
-<br>**Version Control Systems**
+ 
+### Version Control Systems
 <br> A version control system is a tool for managing changes to a file, so that multiple users can edit and contribute code to a shared file.
 Instead of copying the file multiple times for each user to then edit, there is one file, with its edit history recorded. Who contributed what, and when, is recorded 
 as well. Independent users can record their contributions without committing those changes for review. The system will notify when there's a 
 confliction between code. Note that the changes are separate from the original file. In this way, users can changes to the files can be recorded 
 and reviewed before they are taken as a real edit to the original file, allowing them to work in parallel without confliction. 
-<br><br>**Git Configuration**
+### Git Configuration
 <br>Usually, this will only need to be done once. This step sets up your settings for using Git, such as forming your username and email that marks you as the one who is making your edits. 
 Your preferred text editor, and whether or not you want to use these settings globally, is determined. Globally means these settings will be applied to all of your repositories.  
-<br>**Repository** 
+### Repository 
 <br>A repository is the complete history of the changes made to a file that are specified to be reviewed. The repository can be kept in sync across 
 multiple different computers. The history will be stored in your repository, usually ending in `.git`
-<br><br>**Creating a Repository**
+### Creating a Repository
 <br>Once you have configured Git, create the repository in which all versions of your file will be stored. This will be a directory. 
 <br>First navigate to the root project folder, then utilize `git init` to initate the directory as a repository. 
 <br>$`cd [path to your root project folder]`
 <br>$`git init` 
 <br>Avoid creating nested repositories. These are redundant, because when a repository is made, `Git` tracks that directory, and all files and 
 subdirectories in that repository. In fact, if a nested repository is made, the outer repository may attempt to act on the inner repository. 
-<br><br>**Basic structure of a Git Command**
+### Basic structure of a Git Command
 <br>`git verb options`
 <br> A git **verb** is a what we want `Git` to do for us, and an **option** is more information that may need to be provided for the `[verb]` to complete the task we want it to do. 
-<br><br>**Accessing Git Help Manual**
+### Accessing Git Help Manual
 <br>`Git` has a built in feature to access the `Git` help manual, to view subcommands and to see options. 
           This can be accessed by entering any of the following on the command line: 
 <br><br>&ensp;&ensp;$ `git config -h`
 <br>&ensp;&ensp;$ `git config --help`
 <br>&ensp;&ensp;$ `git help` 
 <br><br>`git revert` vs. `git checkout`
-<br><br>**A Good Commit Message**
+### A Good Commit Message
 <br>Leaving a commit message is useful for both yourself and others. Try to keep it less than 50 characters, and convey: "if applied, this commit 
 will..." to accurately describe your changes. 
-<br><br>**Text Editors**
+### Text Editors
 <br>Vim is the default text editor on many Git programs. There are numerous text editor programs you can use with Git that may need to be 
     downloaded. You will use a form of `git config` that is specific to that text editor to install it.  
-<br>**Example Walkthrough of Committing to `Git`**
+### Example Walkthrough of Committing to `Git`
 <br>Suppose you have made an edit to a text file `git_commit_example` and wish to commmit it. 
 <br>First add the new change you made to the staging area. 
 <br>`git add git_commit_example` 
@@ -157,7 +159,7 @@ will..." to accurately describe your changes.
 <br>Then commit this change by: 
 <br>$ `git commit -m [your commit message here]` 
 <br>This means any changes made that were added will be committed. Ensure to leave a `commit message` to describe the changes you have made. 
-<br><br>**Useful Commands** 
+### Useful Commands
 
 |<div style="width:90px">Command</div>| Description| 
 |-------|------------|
@@ -167,14 +169,14 @@ will..." to accurately describe your changes.
 |`rm -rf`| the `rm` command will remove files or directories, while the `-rf` parameter will remove a repository<br>*use with caution, as this can delete a project!|
 |`git diff`|-this show changes in your project<br>-you can use this to compare commits or changes in your working directory for instance|
 
-<br>**Remote vs. Local Repositories and Git Push and Pull**
+### Remote vs. Local Repositories and Git Push and Pull
 <br>A local repository is the versions of your file that you have on your computer. A remote repository is the versions of the file that is hosted on a server that all persons contributing to the project can access.
     A `git push` is when you transfer your local repository to the remote repository. A `git pull` is done when you copy the remote repository to your local repository.   
-<br>**SSH - Creating a Secure Key Pair**
-<br>You will need to have a secure key pair between your local repository and the remote repository. There is a public key, and your unique individual key. If a public key has not been made,
+### SSH - Creating a Secure Key Pair
+You will need to have a secure key pair between your local repository and the remote repository. There is a public key, and your unique individual key. If a public key has not been made,
     that must be done. 
-<br><br>**Conflicts**
-<br>Merging is the process of potentially combining your edits to the original file you were editing. If there are conflicts that compete or interfere with each other, GitHub will highlight this 
+### Conflicts
+Merging is the process of potentially combining your edits to the original file you were editing. If there are conflicts that compete or interfere with each other, GitHub will highlight this 
 and not allow your code to merge.  
 <br><br>See this [link to Github tutorial for beginners](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners) for additional information. 
 
@@ -189,42 +191,42 @@ and not allow your code to merge.
     This guide will provide an overview of the necessary concepts and functions needed to navigate and utilize Python, including what basic 
     variable types are, how to utilize functions, import libraries, Python's unique counting system, for loops, and conceptually how data visualization works with Python.  
 
-**The Basics**
-<br><br>**Variables**
+### The Basics
+#### Variables
 <br>You can assign a value as a variable to later work with. When you call the name of the variable, Python
     will substitute the value of that variable. 
 <br>To make a variable use the `=` sign. 
 <br>For instance: `novel_wordcount = 35432` makes `novel_wordcount` a variable that has a value assigned to it. 
-<br><br>**Data types**
+#### Data types
 <br>Python works with data. Three common types are:
 <br>&ensp;&ensp;**integer** - an integer value, such as `71`, `2`, or `965`
 <br>&ensp;&ensp;**string** - single or double quotes around text, such as 'this_is_a_string' or `34567` 
 <br>&ensp;&ensp;**float** - fractional numbers expressed as decimals, such as `45.67` or `8976.11111` 
-<br><br>**Functions**
+#### Functions
 <br>Python has a set of named functions that have instructions to perform a certain action when its name is typed in the command line. These are commands. One of the best uses of Python is for processing data. There are many different Python functions that can be
 used to interact with your data. This will depend on the program you are using.
-<br><br>**Importing Libraries**
+#### Importing Libraries
 <br>Python has libraries which are units of code that perform certain tasks. These will need to be imported, providing us with more tools than basic python would. For instance, `numpy` reads and interprets data. 
-<br><br>**Counting + Arrays**
+#### Counting + Arrays
 <br>Python starts counting from 0. This is important when referencing indices for arrays: ordered systems of values.
 <br>An array will often depict data. In Python, an indice in an array is given by `[row, column]`. 
-<br><br>**Commenting**
+#### Commenting
 <br>The # symbol preceding a message is used for commenting, or lines that the shell will not interpret as a command.  
-<br>**Making Lists**
+#### Making Lists
 <br>When making a list of values, use a `,` to separate values, and enclose in `[]`
 <br>`[1, 2, 3, 4, 5]` 
-<br><br>**Loops** 
+#### Loops
 <br>Loops are a process that will repeat the same action over and over for unique values in a set or range. 
 <br>For loops are a type of loop, in a general pattern of: "for x variable, enact y on x" where x is a variable and y is a command. 
 <br>The loop will process each element in the list one at a time. 
-<br><br>**If Statements and Conditionals**
+#### If Statements and Conditionals
 <br>Enabling an **if statement** means Python will only execute its given command if the **conditions** of the if statement are met.
 <br>"and" and "or" can be used in the if statement. 
 <br>`if x and y` means both x and y have to be true for the loop to execute. 
 <br>`if x or y` means if x or y or both are true, the loop will execute its command. 
-<br><br>**Data Visualization**: `matplotlib`
+#### Data Visualization: `matplotlib`
 <br>This is one of Python's most commonly used data visualization libraries. More uses than can be listed here are available, such as basic graphing and statistical measures, or grouping multiple plots together. This program is useful for processing large amounts of data. Explore it to access the library's full capabilities.  
-<br>**Functions**
+#### Functions
 <br>A function is a set of commands that will only be executed when called upon, following this format:
 <br>You define the name of the function and parameters, and use `return` to state what you want done. 
 
@@ -236,7 +238,7 @@ used to interact with your data. This will depend on the program you are using.
 !!! Summary
     SSH or secure shell is a way to securely connect your computer to a remote server. This is done by using the shell. SSH needs to be installed on both your computer 
     and the server you are connecting to. This is commonly referred to as a client and server connection. 
-**Important Notes**
+### Important Notes
 <br>Depending upon your operating system, installation of SSH will vary. 
 <br>Once an SSH server is installed, you can start your connection. 
 <br>At the terminal line, type: 
