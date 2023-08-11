@@ -7,7 +7,8 @@ markdown_extensions:
     - attr_list
     - def_list
 nav:
-    - Before your experiment:
+        - Computers101: 'tutorials/computers101.md'
+        - Before your experiment:
         - Computing Accounts and Resources: 'before/accounts.md'
         - Routine beamtime analysis: 'before/analysis.md'
     - During your experiment:
@@ -15,7 +16,6 @@ nav:
     - After your experiment:
         - Reanalyzing timing data: 'after/timetool.md'
     - Miscellaneous:
-        - Computers101: 'tutorials/computers101.md'
         - Troubleshooting: 'troubleshooting.md'
         - Glossary: 'glossary.md'
 theme:
