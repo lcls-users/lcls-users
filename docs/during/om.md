@@ -10,6 +10,9 @@
     The instructions below are valid as of LCLS Run 22 (first half of calendar year 2024). Some details of the setup may change slightly in the near future. Refer back to this page at the beginning of each run for potential updates.
 
 ### Prepare workspace {: #prepare_workspace}
+
+(This section should take no more than 5-10 minutes)
+
 At the beginning of your first shift you need to prepare OM's working directory. This requires access to the operator account for the hutch you will be running the experiment at (`mfxopr`, `cxiopr`, ...). The instructions below will be done from the perspective of `mfxopr`. You may need to subsitute the correct operator or machine names for your hutch to run the commands. The full set of commands without explanatory text can be copied at the end of this block - names will still need to be edited.
 
 !!! note "Skip Ahead"
@@ -31,9 +34,46 @@ At the beginning of your first shift you need to prepare OM's working directory.
 6. Modify the `run_om.sh` script in your workspace directory to use the proper machines for OM to run on.
      - By default, OM will use `daq-mfx-mon02`, `daq-mfx-mon03`, `daq-mfx-mon04`, and `daq-mfx-mon05` to run on. Confirm with beamline staff that this is okay. Check where other things are running. Use `wherepsana -d` to see machines.
      - If you need to change the machines, modify the very last line of the script: `--host daq-mfx-mon02,daq-mfx-mon03,daq-mfx-mon04,daq-mfx-mon05 $(pwd)/monitor_wrapper.sh`. **Note: There is no space between the commas and the hostnames.**
+
+<details>
+    <summary> Combined commands </summary>
+SSH to appropriate machine as operator
+
+```bash
+ssh mfxopr@mfx-monitor # if on control room terminal simply ssh mfx-monitor
+# If the above doesn't work, try it in two steps
+# ssh mfx-monitor
+# ssh mfxopr@mfx-monitor
+```
+
+Setup the working directory - example for `rayonix` detector. Fill in `EXPNAME` where appropriate. Ask beamline staff for the locations of geometry files and masks.
+
+```bash
+cd ~mfxopr/OM-GUI
+EXP_NAME=MYEXP1234 # REPLACE with experiment name
+cp -r template_2023 $EXP_NAME
+cd om-workspace-rayonix
+cp <geom_file_location> rayonix.geom
+cp <mask_file_location> rayonix.h5
+nano run_om.sh # Double check the last line for appropriate machines.
+```
+</details>
+
 ### Launching OM {: #launch_om}
+Once the folder has been appropriately setup, there are a number of processes which need to be launched.
 
-
+1. SSH back to the appropriate machine. As above, this is usually `mfx-monitor`; however, it may be `mfx-daq` depending on what the beamline staff say.
+2. Launch the monitor process: `screen ~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]/run_om.sh`
+    - The use of `screen` is preferred. This will allow other people to reattach to the session from another terminal to e.g. restart the monitor if there are any issues.
+    - To reattach to the session use `screen -xr`. Do **NOT** use `-dr` -> This will detach all clients.
+3. Launch the main GUI elements:
+    - Main GUI: `./~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]/run_gui.sh`
+    - Frame Viewer: `./~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]/run_frame_viewer.sh`
+4. Optionally, start the parameter tweaker. This is only recommended for advanced users with extensive experience with the algorithm and the meaning of relevant parameters.
+    - `./~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]/run_parameter_tweaker.sh`
+    - Note, making modifications using the GUI interface of the parameter tweaker will NOT update the monitor process.
+    - To update the parameters, after a more optimal set has been found using the GUI interface, copy the parameters into the appropriate locations in the `monitor.yaml` file. This is located in the same directory as all the other scripts to launch OM components. The monitor process must be restarted.
+---
 
 ## Potential Issues {: #gotchas}
 ### Geometry
