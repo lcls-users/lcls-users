@@ -12,6 +12,7 @@ nav:
         - Computing Accounts and Resources: 'before/accounts.md'
         - Routine beamtime analysis: 'before/analysis.md'
     - During your experiment:
+        - Running OM: 'during/om.md'
         - Running the timetool: 'during/timetool.md'
     - After your experiment:
         - Reanalyzing timing data: 'after/timetool.md'
