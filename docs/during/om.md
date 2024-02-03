@@ -24,7 +24,7 @@ At the beginning of your first shift you need to prepare OM's working directory.
         2. `ssh mfxopr@mfx-monitor`
     - `mfx-monitor` is the default machine for launching OM; however, confirm with beamline staff if it is preferable to use `mfx-daq`.
 2. Move to the OM directory: `cd ~mfxopr/OM-GUI`
-3. Prepare the working directory by copying the template - replace replace `<exp_name>` with your experiment name, e.g. `mfxx1001122`:
+3. Prepare the working directory by copying the template - replace `<exp_name>` with your experiment name, e.g. `mfxx1001122`:
     - `cp -r template_2023 <exp_name>`
 4. Change to the workspace directory. If using an `ePix10k2M` detector use `<exp_name>/om-workspace`. If using a `Rayonix` detector use `<exp_name>/om-workspace-rayonix`
      - `cd om-workspace[-rayonix]`
@@ -77,7 +77,7 @@ Once the folder has been appropriately setup, there are a number of processes wh
 
 ## Potential Issues {: #gotchas}
 ### Geometry
-Geometry conventions lead to no shortage of potential issues at LCLS. Please pay careful attention to the formats you are using with OM.
+Geometry conventions lead to no shortage of potential issues at LCLS. Please pay careful attention to the formats you are using with OM. OM expects the `.geom` geometry file to follow Crystfel's format which is different from the `psana` format for geometry files.
 !!! danger "Converting geometries"
     If you need to create a new mask be aware that OM and `psana` use different formats and conventions. In order to convert a `psana` mask into an OM mask first:
 
