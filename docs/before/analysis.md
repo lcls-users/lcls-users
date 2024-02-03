@@ -29,7 +29,7 @@ The `eLog` provides a unifying entrypoint from your browser.
 | *__LCLS Data Analysis.__ TBD.* |
 
 
-Below is a brief summary of each of the major available options. Consider reading through the alternatives below to decide on which may be most appropriate for your experiment. Additional information for setting up and running each type of application can be found on their respective pages. Please note that not all applications can be run at simulatenously - potential conflicts will be highlighted in red below.
+Below is a brief summary of each of the major available options. Consider reading through the alternatives below to decide on which may be most appropriate for your experiment. Additional information for setting up and running each type of application can be found on their respective pages. Please note that not all applications can be run simultaneously - potential conflicts will be highlighted in red below.
 
 ### `psana`: the core of LCLS data analysis {: #psana}
 *in construction; contributions welcome*
