@@ -49,7 +49,7 @@ Running OM is a two-step process:
 1. First a monitor process is launched. The monitor collects data in real time and generally applies some sort of analysis, such as peak finding, azimuthal integration, etc. This process must be run on a machine with access to the data. At LCLS this means using the monitoring nodes (see note below).
 2. Graphical frontends are launched. These may vary by experiment, but will generally be used for viewing detector images, detected hits, and parameter tuning.
 
-For information on running OM at LCLS, please refer to the following [page](/during/om/).
+For information on running OM at LCLS, please refer to the following [page](../during/om.md).
 
 !!! danger "OM, shared memory, and competing processes"
     There is a a limit to the number of additional real-time monitoring tools which can be run simultaneously with OM. Each hutch is equipped with a number of monitoring nodes which are used for real-time monitoring applications. These nodes receive a fraction of data coming from all detectors. This data is copied into shared memory to be accessed by real-time software. In general, if OM is monitoring the data, another application, such as `ami2` cannot be used at the same time.
@@ -106,7 +106,7 @@ where `${SIT_PSDM_DATA}` is one of the following:
 /cds/data/drpsrcf # PCDS FFB cluster
 /cds/data/psdm # PCDS psana cluster
 ```
-For more information on these clusters, see the [Computing Accounts and Resources Page](/before/accounts/).
+For more information on these clusters, see the [Computing Accounts and Resources Page](accounts.md).
 
 ##### Performing tasks interactively
 
