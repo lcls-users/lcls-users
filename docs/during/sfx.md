@@ -35,7 +35,7 @@ The measured distance between sample and detector will eventually be reported in
 0. ssh to psana interactive node on S3DF.
 1. go to central installation directory: `cd /sdf/group/lcls/ds/tools/om`
 2. source cheetah environment: `source setup-cheetah.sh`
-3. launch the GUI: `cheetah_gui.sh`
+3. launch the GUI: `cheetah_gui.py`
 
 ### Setup experiment
 
@@ -64,7 +64,7 @@ crystfel
 
 ### Setup experiment
 
-Load data and point to the run folder under Cheetah's hdf5 directory. Also point to the Cheetah geomtry file.
+Load data and point to the run folder under Cheetah's hdf5 directory. Also point to the Cheetah geometry file.
 
 | ![Crystfel](images/crystfel.png) | 
 |:--------------------------------:| 
