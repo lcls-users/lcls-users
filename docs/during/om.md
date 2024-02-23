@@ -63,14 +63,14 @@ nano run_om.sh # Double check the last line for appropriate machines.
 Once the folder has been appropriately setup, there are a number of processes which need to be launched.
 
 1. SSH back to the appropriate machine. As above, this is usually `mfx-monitor`; however, it may be `mfx-daq` depending on what the beamline staff say.
-2. Launch the monitor process: `screen ~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]/run_om.sh`
+2. Launch the monitor process: `cd ~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]; screen run_om.sh`
     - The use of `screen` is preferred. This will allow other people to reattach to the session from another terminal to e.g. restart the monitor if there are any issues.
     - To reattach to the session use `screen -xr`. Do **NOT** use `-dr` -> This will detach all clients.
 3. Launch the main GUI elements:
-    - Main GUI: `./~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]/run_gui.sh`
-    - Frame Viewer: `./~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]/run_frame_viewer.sh`
+    - Main GUI: `cd ~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]; ./run_gui.sh`
+    - Frame Viewer: `cd ~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]; ./run_frame_viewer.sh`
 4. Optionally, start the parameter tweaker. This is only recommended for advanced users with extensive experience with the algorithm and the meaning of relevant parameters.
-    - `./~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]/run_parameter_tweaker.sh`
+    - `cd ~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]; ./run_parameter_tweaker.sh`
     - Note, making modifications using the GUI interface of the parameter tweaker will NOT update the monitor process.
     - To update the parameters, after a more optimal set has been found using the GUI interface, copy the parameters into the appropriate locations in the `monitor.yaml` file. This is located in the same directory as all the other scripts to launch OM components. The monitor process must be restarted.
 ---

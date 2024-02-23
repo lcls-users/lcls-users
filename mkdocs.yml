@@ -13,6 +13,7 @@ nav:
         - Routine beamtime analysis: 'before/analysis.md'
     - During your experiment:
         - Running OM: 'during/om.md'
+        - SFX analysis tools: 'during/sfx.md'
         - Running the timetool: 'during/timetool.md'
     - After your experiment:
         - Reanalyzing timing data: 'after/timetool.md'
