@@ -11,16 +11,26 @@
 ### Setup `btx`
 Ask your instrument scientist or data POC to setup `btx` in the eLog. They will essentially need to run something similar to the following:
 ```bash
-(base) [fpoitevi@sdfiana002]$ setup_btx.sh -e mfxl1025422 -n 120 -r lcls:onshift2 -w sfx
+(base) [fpoitevi@sdfiana002]$ setup_btx.sh -e <expermient> -n <ncores> -w sfx [-r <reservation>]
 ```
 
-Make sure that the `geometry_agbe` or `optimize_geometry` workflow is defined in the Workflow Definition tab as in the figure below.
+This script is provided with every `btx` release. A central installation is located on S3DF at `/sdf/group/lcls/ds/tools/btx/stable/scripts`.
 
-|                                                                        ![BTX workflow definition in the eLog](images/btx-def.png)                                                                        | 
-|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
+ - `<experiment>` should be replaced the with full experiment name.
+ - `<ncores>` should be replaced with the number of cores to use for processing. For most cases 120 or 240 cores is a good choice.
+ - `-r <reservation>` is an optional flag to run with a SLURM reservation (e.g. `lcls:onshift2`). Discuss with the data POC if this is necessary. The use of reservations is slowly being phased out.
+
+After the script has been run, go to the experiment's eLog page to make sure that the proper workflows have been defined. Workflows are located on the Workflows>Definitions tab. There are three `btx` workflows to look for (although workflows for other software may also be present):
+
+- A `process_sfx` workflow. This runs the crystallography processing pipeline.
+- An `optimize_geometry` workflow. This is used for optimizing detector geometry. This workflow is called "`setup_btx`" in the image below, following an older naming scheme.
+- A `setup_metrology` workflow. This is a utility for making sure necessary files are available. This workflow is called "`setup_btx`" in the image below, following an older naming scheme.
+
+|                                                                        ![BTX workflow definition in the eLog](images/btx-def.png)                                                                        |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |                                                                                 __BTX workflow definition in the eLog.__                                                                                 |
 
-This will also create a `btx` directory in the experiment scratch folder, at the following path: `/sdf/data/lcls/ds/mfx/mfxl1025422/scratch/btx`. At this point, the `btx` directory looks like:
+The setup script will also create a `btx` directory in the experiment scratch folder, at the following path: `/sdf/data/lcls/ds/<hutch>/<experiment>/scratch/btx`. At this point, the `btx` directory looks like:
 ```bash
 (base) [fpoitevi@sdfiana002 btx]$ tree
 .
@@ -29,7 +39,7 @@ This will also create a `btx` directory in the experiment scratch folder, at the
     └── config.yaml
 ```
 
-A template configuration file has been created, starting with the lines below. `btx` will organize results under the `root_dir`. Make sure the rest of the parameters are to your liking.
+A template configuration file has been created (`config.yaml`), starting with the lines below. Below the `mfxl1025422` experiment is used as an example. The fields will be appropriately updated to reflect the experiment passed to the setup script. Importantly, `btx` will organize results under the `root_dir`. This is by default the folder in the scratch directory. You can change this to another directory if needed. Take a few minutes as well to make sure the rest of the parameters for each task are to your liking.
 ```bash
 setup:
   queue: 'milano'
