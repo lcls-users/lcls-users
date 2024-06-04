@@ -121,6 +121,13 @@ module load crystfel/0.10.2
 crystfel
 ```
 
+**Note:** The CrystFEL module only exports the required path to find the binaries. Some of CrystFEL's tools, such as `peakogram-stream` or `detector-shift` rely on Python which is not available at the system level. In order to use these tools you can activate the standard `psana` conda environment. The conda environment may have interactions and incompatibilites with some other CrystFEL utilities so only run the command below if required by the specific tool you are trying to use.
+
+To activate the `psana` environment you can run:
+```bash
+source /sdf/group/lcls/ds/ana/sw/conda1/manage/bin/psconda.sh
+```
+
 ### Setup experiment
 
 Load data and point to the run folder under Cheetah's hdf5 directory. Also point to the Cheetah geometry file.
