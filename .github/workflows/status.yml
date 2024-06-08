@@ -11,9 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-	  - name: Move to In Progress
-	    uses: kin/gh-action-move-issue-to-column@1.0
+      - name: Move to In Progress
+        uses: kin/gh-action-move-issue-to-column@1.0
 		with:
-		  access-token: "#{{ secrets.GITHUB_TOKEN }}"
-		  project-name: "My Project"
+		  access-token: "${{ secrets.GITHUB_TOKEN }}"
+		  project-name: "LCLS AI/ML Documentation Challenge"
 		  target-column: "In Progress"
