@@ -6,13 +6,24 @@ The documentation stored in this repository is built and hosted by Read the Docs
 
 2. [Fork this repository](https://github.com/lcls-users/lcls-users/fork) and clone a version locally (`git clone ssh://git@github.com/<user>/lcls-users.git`). Setup `lcls-users` as the upstream: `git remote add upstream https://github.com/lcls-users/lcls-users.git`.
 
-3. Create a new feature branch to do work (`git checkout -b <new-branch-name>`).
+3. Create a new feature branch to do work
+
+   - Option 1: In the right sidebar under "Development", click Create a branch. If the issue already has a linked branch or pull request, select and click Create a branch. [more info](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-a-branch-for-an-issue)  There should be a drop-down menu letting you create the branch on your own fork of the repository.
+
+   - Option 2: Manually `git checkout -b <new-branch-name>` and be sure to reference the issue number when writing the pull-request (e.g. [closes #NN](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)).  Note that you can create a pull request right away and [mark it as a draft](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request) using the right side-bar under "Reviewers".
 
 4. Run the steps below to preview locally and make edits.  Then commit your changes (`git commit`).
 
-5. Push your changes (`git push -u origin <new-branch-name>`) and go to your lcls-users repo on github to create a pull request.
+5. Push your changes (`git push -u origin <new-branch-name>`) and go to your lcls-users repo on github to create/update your pull request.
 
-6. Sync your main branch from upstream:
+   - Depending on tests/comments, etc.  You may want to continue committing
+     changes to your feature branch and then pushing them.  Changes you push
+     will be reflected in the pull-request and visible to your reviewers.
+
+     Once the pull request is merged, however, these updates no longer have
+     any effects.
+
+6. Sync your main branch from upstream.  This fetches a local copy of all the changes that have merged to main.  It's generally useful any time you want to start work on a new feature branch.
 
 ```
     git checkout main
