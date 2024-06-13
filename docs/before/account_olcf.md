@@ -58,6 +58,7 @@ you must either:
 In practice, you still need to do step (1) after receiving
 an allocation.  After completing the new user form,
 you will be given instructions on how to proceed.
+
 The following general steps happen:
 
 1. You agree to the [system use policies][6].
@@ -70,6 +71,9 @@ The following general steps happen:
 
 4. You should now be able to login to OLCF systems
    (e.g. `ssh <XCAMS>@flux.op.ccs.ornl.gov` or `ssh <NCCSID>@frontier.olcf.ornl.gov`)
+
+Further information and more detailed instructions are
+available from the [OLCF Accounts and Projects Documentation][10].
 
 
 ## Step 2 - Understand OLCF Systems
@@ -143,4 +147,5 @@ notebooks.
 [6]: https://docs.olcf.ornl.gov/accounts/olcf_policy_guide.html
 [7]: https://olcf.ornl.gov/wp-content/uploads/2022/02/Best-Practices-2022.pdf
 [8]: https://docs.olcf.ornl.gov/data/index.html
-[8]: https://docs.olcf.ornl.gov/
+[9]: https://docs.olcf.ornl.gov/
+[10]: https://docs.olcf.ornl.gov/accounts/accounts_and_projects.html#applying-for-a-user-account
