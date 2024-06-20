@@ -17,7 +17,7 @@ To this end, you will need to follow the steps below (*and for more detailed inf
 4. The experiment spokesperson adds your UNIX account to the [Experiment Manager](https://pswww.slac.stanford.edu/lgbk/lgbk/experiments).
 
 !!! note "Enabling access to the S3DF"
-    The SLAC-wide Shared Science Data Facility ([S3DF](https://lcls-users.readthedocs.io/en/latest/glossary/#s3df)) has replaced the computer and storage resources managed by LCLS Photon Controls and Data Systems ([PCDS](https://lcls-users.readthedocs.io/en/latest/glossary/#pcds)) that was  used for LCLS experiment data management prior 2023.
+    The SLAC-wide Shared Science Data Facility ([S3DF](https://lcls-users.readthedocs.io/en/latest/glossary/#s3df)) has replaced the compute and storage resources managed by LCLS Photon Controls and Data Systems ([PCDS](https://lcls-users.readthedocs.io/en/latest/glossary/#pcds)) that was  used for LCLS experiment data management prior to 2023.
     In order to use S3DF, it is necessary to enable your S3DF account using your SLAC UNIX account. Detailed information in the [S3DF documentation here][7].
 
 # Step 2 - Understand LCLS Data Systems
@@ -69,7 +69,8 @@ ${SIT_PSDM_DATA}/<instrument>/<experiment>
 !!! note "More S3DF info"
     For more information about the S3DF, check out the PCDS documentation [here][4] and the official S3DF docs [here][5].
 
-
+!!! note "Retrieving data from tape"
+    The current mechanism to request retrieval of experiment data from tape to disk consists in emailing `pcds-datamgt-l@slac.stanford.edu`.
 
 [1]: https://confluence.slac.stanford.edu/pages/viewpage.action?pageId=92183280
 [2]: https://confluence.slac.stanford.edu/display/PSDM/LCLS+Data+Analysis
