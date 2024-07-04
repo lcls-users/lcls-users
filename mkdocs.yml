@@ -10,9 +10,9 @@ nav:
     - Before your experiment:
         - Computers 101: 'tutorials/computers101.md'
         - Computing Accounts and Resources: 'before/accounts.md'
+        - Data Loading and Processing: 'before/data.md'
         - Routine beamtime analysis: 'before/analysis.md'
         - AI/ML tutorials: 'before/aiml_tutorials.md'
-        - Data Loading and Processing: 'before/data.md'
     - During your experiment:
         - Running OM: 'during/om.md'
         - SFX analysis tools: 'during/sfx.md'
