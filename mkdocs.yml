@@ -10,7 +10,7 @@ nav:
     - Before your experiment:
         - Computers 101: 'tutorials/computers101.md'
         - Computing Accounts and Resources: 'before/accounts.md'
-        - Data Loading and Processing: 'before/data.md'
+        - Data Loading: 'before/dataloading.md'
         - Routine beamtime analysis: 'before/analysis.md'
         - AI/ML tutorials: 'before/aiml_tutorials.md'
     - During your experiment:
@@ -24,7 +24,7 @@ nav:
         - Glossary: 'glossary.md'
 theme:
     name: readthedocs
-    highlightjs: true
+    highlights: true
     hljs_languages:
         - yaml
         - python

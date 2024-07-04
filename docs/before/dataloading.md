@@ -1,4 +1,4 @@
-# Data Loading and Processing
+# Data Loading
 
 ## Basics of psana
 
