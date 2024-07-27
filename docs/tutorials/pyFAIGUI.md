@@ -1,6 +1,25 @@
 # How to open and use the pyFAI GUI
 
 **How to open pyFAI GUI Method 1:**
+
+On your local computer, do this:
+create the file ~/.ssh/config
+copy paste the below in it
+Host s3df
+  Hostname s3dflogin.slac.stanford.edu
+  User philips
+  ForwardAgent yes
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host psana
+  Hostname psana
+  User philips
+  ProxyCommand ssh s3df -W %h:%p
+  ForwardAgent yes
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
 open terminal
 ssh psana
 Enter your password twice
