@@ -82,7 +82,6 @@ ${SIT_PSDM_DATA}/<instrument>/<experiment>
 !!! note "More S3DF info"
     For more information about the S3DF, check out the PCDS documentation [here][4] and the official S3DF docs [here][5].
 
-
 ### Past experiments (pre 2023)
 
 First, get in the system:
