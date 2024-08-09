@@ -12,8 +12,10 @@ It handles data transfer and processing through Globus and accommodates several 
 
 [![ptychodus demo](images/ptychodus_demo.png)](https://stanford.zoom.us/rec/share/N-w09iJVZHtU8SROISXxGU9VrVr9MJ_K1LogAesa0sFKQAB5z-abm0mVsLtEqtYI.1hqFTgV_Wnzrnycp?startTime=1723140286000
 Passcode: 1LB$2%!+) 
+*(click on image above to watch the Zoom recording. Passcode: 1LB$2%!+)*
 
 [![ptychodus slides](images/ptychodus_slides.png)](https://docs.google.com/presentation/d/1LvIC4G-chT-suH7F7Z-sw9W8zytk2VJD/edit?usp=sharing&ouid=100327392425536497122&rtpof=true&sd=true) 
+*(click on image above to see the slides.)*
 
 [*(back to top)*](#toc)
 
