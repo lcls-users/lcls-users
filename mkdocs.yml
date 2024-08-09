@@ -11,7 +11,7 @@ nav:
         - Computers 101: 'tutorials/computers101.md'
         - Computing Accounts and Resources: 'before/accounts.md'
         - Routine beamtime analysis: 'before/analysis.md'
-        - AI/ML tutorials: 'before/aiml_tutorials.md'
+        - Tutorials and Demos: 'before/tutorials.md'
     - During your experiment:
         - Running OM: 'during/om.md'
         - SFX analysis tools: 'during/sfx.md'
