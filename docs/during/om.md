@@ -74,6 +74,13 @@ Once the folder has been appropriately setup, there are a number of processes wh
     - `cd ~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]; ./run_parameter_tweaker.sh`
     - Note, making modifications using the GUI interface of the parameter tweaker will NOT update the monitor process.
     - To update the parameters, after a more optimal set has been found using the GUI interface, copy the parameters into the appropriate locations in the `monitor.yaml` file. This is located in the same directory as all the other scripts to launch OM components. The monitor process must be restarted.
+
+
+#### Note: Resetting Plots without restarting OM
+Normally, to reset the accumulated plots, OM should be restarted. Restarting OM could however take several seconds, so it is possible to reset the plots without stopping the program.
+
+1. SSH back to the appropriate machine. As above, this is usually `mfx-monitor`; however, it may be `mfx-daq` depending on what the beamline staff say.
+2. Run the reset plot script: `cd ~mfxopr/OM-GUI/<exp_name>/om-workspace[-rayonix]; ./reset_om_plots.sh`
 ---
 
 ## Potential Issues {: #gotchas}
