@@ -11,11 +11,23 @@
 
 To access and process your LCLS experiment data, you first need a valid SLAC UNIX account, enabled in the LCLS System.
 To this end, you will need to follow the steps below (*and for more detailed information, check out this [Confluence documentation page][6]*).
+The specific process depends on your role at SLAC.
+
+## For LCLS Users
 
 1. Apply for a UNIX account through the [User Portal](https://userportal.slac.stanford.edu/).
 2. Take the course [CS101 - cyber security basics](http://training.slac.stanford.edu/web-training.asp).
 3. Understand the [Acceptable Use of SLAC Information Technology Resources](https://policies.slac.stanford.edu/policy/acceptable-use-information-technology-resources).
 4. The experiment spokesperson adds your UNIX account to the [Experiment Manager](https://pswww.slac.stanford.edu/lgbk/lgbk/experiments).
+
+## For Interns and Collaborators
+
+1. Fill out the [Site Access Request Form](https://erp-hprdext.erp.slac.stanford.edu/psc/hprdext/EMPLOYEE/HRMS/c/SL_DOE_FACT.SL_DOE_FACTS_USER.GBL?source=POI) to request a SLAC ID number. Non citizens will need to provide additional information including passport photos and the I-94 form available from the U.S. Customs and Boarder Protection [webpage](https://i94.cbp.dhs.gov/recent-search).
+2. Your SLAC point of contact will receive an email containing the SLAC ID Number. Note that the process will take slightly longer for non US citizens.
+3. Follow the "Manual Login" instructions to get a password and log into the [Web training portal](https://slactraining.slac.stanford.edu/web-training-portal-0).
+4. Complete CS101 - cyber security basics
+5. Your point of contact will request a UNIX account for you using the [SLAC Computer Account Request form](https://slacprod.servicenowservices.com/it_services?id=sc_cat_item&sys_id=17176b676ff12100aae0c6012e3ee4f7&sysparm_category=d65827c46fd921009c4235af1e3ee434). More info can be found about the process [here](https://it.slac.stanford.edu/support/KB0010082).
+
 
 !!! note "Enabling access to the S3DF"
     The SLAC-wide Shared Science Data Facility ([S3DF](https://lcls-users.readthedocs.io/en/latest/glossary/#s3df)) will soon replace the computer and storage resources managed by LCLS Photon Controls and Data Systems ([PCDS](https://lcls-users.readthedocs.io/en/latest/glossary/#pcds)) currently used for LCLS experiment data management.
