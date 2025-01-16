@@ -1,3 +1,7 @@
+!!! note "Quicklinks"
+    - **OLCF Account Applications** - [Apply for Account Membership][10]
+    - **OLCF System docs** - [official OLCF documentation][9].
+
 # OLCF Access Guide
 
 ## Step 0 - Two account types at ORNL

@@ -1,3 +1,10 @@
+!!! note "Quicklinks"
+    - **Account** - [Create a UNIX account][6]
+    - **Computing** - [Access and Resources][1]
+    - **Data Analysis** - for [LCLS-I][2] and for [LCLS-II][3]
+    - **FFB docs** - [PCDS maintained documentation page][8]
+    - **S3DF docs** - [PCDS maintained documentation page][4] + [official S3DF documentation][5].
+
 # Step 1 - Get a computer account
 
 To access and process your LCLS experiment data, you first need a valid SLAC UNIX account, enabled in the LCLS System.
