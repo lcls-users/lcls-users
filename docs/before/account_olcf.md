@@ -16,9 +16,9 @@ and Odo.
 
 This is different from your NCCS account.
 Your NCCS account usually has a different username,
-and is always RSA-token based, rather than password
-based.  The NCCS account allows you access to "moderate"
-NCCS systes, like Frontier, Andes, DTN and Marble.
+and uses an RSA SecurID token or a mobile phone app,
+rather than password based.  The NCCS account allows you access to "moderate"
+NCCS systems, like Frontier, Andes, DTN and Marble.
 
 The reason for the difference is that OLCF maintains
 "open" systems completely isolated from "moderate"
@@ -95,7 +95,7 @@ Different systems have different filesystems mounted:
 * `/gpfs/alpine2/<project-id>` (summit)
 * `/lustre/orion/<project-id>` (frontier, andes)
 
-This is an NFS `/ccs/proj/<project-id>` directory
+This is an NFS directory (`/ccs/proj/<project-id>`)
 where software should be installed, and where results
 should be copied after jobs.  This reduces clutter on the
 high-performance filesystems.  Note that the high-performance
